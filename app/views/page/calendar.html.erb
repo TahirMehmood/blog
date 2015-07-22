@@ -1,0 +1,8 @@
+<h1>Calendar</h1>
+
+<%#= @time.year  %> <%#= @time.strftime("%B")%>
+<!--Day of the week
+<%#= day_of_week = @time.strftime("%w").to_i %><!--br/-->
+
+<%#= mail_to("tahir.vcs@gmail.com","Email Me")%>
+<%= calendar(@month , @year ) %>

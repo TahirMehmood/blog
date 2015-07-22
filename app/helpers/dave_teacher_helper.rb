@@ -1,0 +1,2 @@
+module DaveTeacherHelper
+end
