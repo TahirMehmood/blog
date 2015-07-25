@@ -17,15 +17,16 @@ class CommentsController < ApplicationController
       end
     end
   end
-
-
+#redirect_to movies_path(@comment.movie_id) ,notice: 'Deleted successfully.'//movies_url, notice: 'Movie was successfully destroyed.'
   def destroy
+    #@comment = @movie.comments.new(comment_params)
     @comment.destroy
       respond_to do |format| 
-        format.html { redirect_to movies_path ( @comment.movie_id )} 
-        format.json { head :no_content } 
+        #format.html {  redirect_to movies_url, notice: 'Movie was successfully destroyed.'} 
+        #format.json { head :no_content } 
       end
   end
+
 
   private
   # Use callbacks to share common setup or constraints between actions.

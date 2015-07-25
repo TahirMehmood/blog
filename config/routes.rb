@@ -13,8 +13,11 @@ Rails.application.routes.draw do
   # to remove querry string in url bcz it is not search engine friendly
   resources :movies do
     get 'page/:page', :action => :index , :on => :collection
-    resources :comments
     # so one movie have many comments
+    resources :comments
+    delete 'movie/:id/comments/:comment_id',
+           :controller => :comments , :action => :destroy , :as => "destroy_comment"
+
   end
   get 'person/index'
 
